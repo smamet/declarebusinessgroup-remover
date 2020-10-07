@@ -6,8 +6,7 @@
  * IMPORTANT: Set the wpmodel in application's folder
  * 
  * The script will extract the necessary data from the infected site and will transfer it to the new website
- * - Plugins & Themes will not be imported to limit risk
- * - Uploads will be exported
+ * - Plugins, Themes, uploads will be exported
  * 
  * Usage php fix_declarebusinessgroup.php [infected_folder] [cleanup_destination] [url]
  * 
