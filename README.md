@@ -33,5 +33,5 @@ Also update all you plugins and themes to avoid your website to be exploited aga
 
 This tool works only for mfa.declarebusinessgroup.ga virus, not the others, but you can easily customize the tool to suit your needs.
 
-I hope this will !
+I hope this will help!
 
