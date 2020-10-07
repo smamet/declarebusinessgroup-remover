@@ -10,19 +10,19 @@ I developped this tool after having been infected by it. It is very basic and ca
 * You need to set an up to date wordpress installation in wpmodel. You can add plugins and themes which will be added to the new install
 
 ## Usage
-
-  php fix_declarebusinessgroup.php [infected_folder] [destination] [url_no_protocol]
-  
+```
+php fix_declarebusinessgroup.php [infected_folder] [destination] [url_no_protocol]
+```  
 **Example**
-
-  php fix_declarebusinessgroup.php /var/www/myinfectedsite.com/ /home/web/ www.mywebsite.com
-  
+```
+php fix_declarebusinessgroup.php /var/www/myinfectedsite.com/ /home/web/ www.mywebsite.com
+```  
 This will create a folder /home/web/mywebsite.com which will be the fixed wordpress.
 
 
 ## What it does
 
-* Copy wpmodel to the destination
+* Copy content of wpmodel/ to the destination (wpmodel should simply be an empty WP installation)
 * Replaces the wp-config with correct values (If Multisite, you will need to add the ALLOW_MULTISITE parameters in wp-config manually)
 * Copy plugins/, themes/ and uploads/ from infected site to cleaned site, and cleanup the folders from parasit
 * Fix all MySQL malicious urls including all serialized data in wp_options
