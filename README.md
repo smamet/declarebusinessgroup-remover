@@ -55,9 +55,9 @@ tcp        0      0 0.0.0.0:4661            0.0.0.0:*               LISTEN      
 pwdx 23752
 ``` 
 
-3) You can then delete the folder where malitious script is, and kill the process. I suggest you chmod -R 555 to prevent the virus to write again during the cleanup time.
-4) Inspect index.php, wp-settings.php and wp-config.php. 
+3) You can then delete the folder where malicious script is, and kill the process. I suggest you change permissions on the file and folders to prevent the virus to write again during the cleanup time. This can be done by the command "chmod -R 555".
+4) Inspect index.php, wp-settings.php and wp-config.php and remove all malicious includes. 
 5) You will often see a 'blog/' folder with the core of the virus files in it. 
-6) Also verify for any hidden 'ico'  files.
-7) Usually it creates tops on .htaccess giving access to different files clean that up.
+6) Also verify for any hidden 'ico'  files. (hidden files start by a dot "." on linux. Use "ls -lah" to see them)
+7) Usually it creates tons on .htaccess giving access to different files clean that up.
 
