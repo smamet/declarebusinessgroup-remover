@@ -35,3 +35,29 @@ This tool works only for mfa.declarebusinessgroup.ga virus, not the others, but 
 
 I hope this will help!
 
+## How to detect an infection of gutenblock-64 / stealth Virus
+
+Looks like this ga.declarebusinessgroup.ga virus is the first step to the setup of a tool that gives control on your server to the attacker. Here is how you can see if they are using your machine for an attack. 
+
+If you are on a linux server:
+
+1) Check for suspicius open port
+```
+netstat -lntp
+```  
+Seeing something like this means that you where hacked:
+```
+tcp        0      0 0.0.0.0:4661            0.0.0.0:*               LISTEN      23752/./cron.php 
+``` 
+
+2) Identify the process by using "pwdx [pid]". The first part in 23752/./cron.php is the PID of the process.
+```
+pwdx 23752
+``` 
+
+3) You can then delete the folder where malitious script is, and kill the process. I suggest you chmod -R 555 to prevent the virus to write again during the cleanup time.
+4) Inspect index.php, wp-settings.php and wp-config.php. 
+5) You will often see a 'blog/' folder with the core of the virus files in it. 
+6) Also verify for any hidden 'ico'  files.
+7) Usually it creates tops on .htaccess giving access to different files clean that up.
+
